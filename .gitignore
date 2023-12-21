@@ -9,6 +9,9 @@
 # testing
 /coverage
 
+#custom
+/src/app/create
+
 # next.js
 /.next/
 /out/

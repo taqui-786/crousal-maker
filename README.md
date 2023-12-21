@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Crousal Maker 📖 with Nextjs
 
-## Getting Started
+Crousal maker is a simple crousal editing platform with in-built crousals templates only you can edit heading , descriptions and Images and download it in both format PDF and JPEG .
 
-First, run the development server:
+![Demo](https://firebasestorage.googleapis.com/v0/b/projectfriendz-45b49.appspot.com/o/images%2FWeb%20capture_22-12-2023_135_localhost.jpeg?alt=media&token=4c00b593-e7d3-471c-9b36-acbc80edf7c3)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## TECH STACK
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Nextjs
+Typescript
+Shadcn UI
+js-pdf
+Html2canvas
+tinyColor2
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Clone it 
+It is a simple app and i know it hava so many bugs and need some improvement, 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You can clone it and add more templates you can also run as a SAAS business.

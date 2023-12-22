@@ -14,7 +14,7 @@ const karla = Karla({ subsets: ["latin"], weight: ["400"] });
 
 
 function TemplateTwo() {
-  const { userImg ,SetCrousalValues, count, crousalHandle, bg, bgColor, setBgColor ,primaryColor } = useMyContext();
+  const { userImg ,SetCrousalValues, count, crousalHandle, bg, bgColor, setBgColor ,primaryColor,setShowForm } = useMyContext();
 
   const [templateData, setTemplateData] = useState({
     crousals: [
@@ -46,6 +46,16 @@ function TemplateTwo() {
     haveBanners:false
   });
 
+
+  useEffect(() => {
+    if(count >= 1){
+      const len = count - 1
+      const handleShow = {
+        title:templateData.crousals[len].Title !== null ? true : false, subtitle:false, description: templateData.crousals[len]?.Description !== null ? true : false
+      }
+      setShowForm(handleShow)
+    }
+  }, [count])
 useEffect(() => {
   setBgColor(templateData.bgColor)
   SetCrousalValues(templateData.bgColor, templateData.primaryColor, templateData.crousals.length, true )

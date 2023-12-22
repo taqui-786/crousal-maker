@@ -17,7 +17,7 @@ function TemplateOne() {
         myImg,
         bg,
         count,
-        setHaveImg, banner
+        setHaveImg, banner, setShowForm
     } = useMyContext()
 
 const [templateData, setTemplateData] = useState ({
@@ -78,6 +78,16 @@ const [templateData, setTemplateData] = useState ({
       defaultBg: "#f2ffd5",
       primaryColor: "#000",
 })
+
+  useEffect(() => {
+    if(count >= 1){
+      const len = count - 1
+      const handleShow = {
+        title:templateData.crousal[len].Title !== null ? true : false, subtitle:templateData.crousal[len]?.subtitle !== null ? true : false, description: templateData.crousal[len]?.description !== null ? true : false
+      }
+      setShowForm(handleShow)
+    }
+  }, [count])
 
   // Function to update the bannerUrl for a specific item
   const updateBannerUrl = (index: number, newUrl: string) => {

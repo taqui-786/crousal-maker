@@ -10,7 +10,11 @@ interface slideDatatypes {
   description?: string;
   bannerUrl?: string;
 }
-
+interface showFormTypes{
+  title?: boolean;
+  subtitle?: boolean;
+  description?: boolean;
+}
 interface DataContextTypes {
   crousalHandle: userHandletypes;
   setCrousalHandle: (v: any) => void;
@@ -38,7 +42,9 @@ interface DataContextTypes {
   haveImg: boolean, 
   setHaveImg: (v:any) => void
   link:string,
-  setLink:(v:any) => void
+  setLink:(v:any) => void,
+  showForm: showFormTypes, 
+  setShowForm : (v:any) => void
 }
 
 const MyContext = createContext<DataContextTypes | undefined>(undefined);
@@ -60,6 +66,7 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
   const [myImg, setMyImg] = useState<string>('')
   const [link, setLink] = useState('')
   const [crousal, setCrousal] = useState()
+  const [showForm, setShowForm] = useState({title:true, subtitle: true, description: true})
   const [userImg, setUserImg] = useState("https://firebasestorage.googleapis.com/v0/b/projectfriendz-45b49.appspot.com/o/images%2FLogo%20img%20me.png?alt=media&token=a6386667-06a8-45ba-8035-20604a0551e4");
 
 
@@ -78,7 +85,7 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
         count,
         setCount,
         crouLength,
-        setCrouLength,
+        setCrouLength,showForm, setShowForm,
         slideData,bg ,SetCrousalValues ,setBg, setSlideData,bgColor, setBgColor,primaryColor, setPrimaryColor,banner, setBanner,userImg, setUserImg,myImg, setMyImg,crousal, setCrousal
       }}
     >
